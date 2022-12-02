@@ -1,0 +1,74 @@
+header {
+    margin-left: 5vw;
+}
+
+.grupos {
+    background-color: blue;
+    margin: 3vh 3vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.grupo {
+    width: 28vw;
+    height: 20vh;
+    min-width: 340px;
+    min-height: 250px;
+    background-color: green;
+    border-radius: 1vw;
+    padding: 1vh 1vw;
+    box-sizing: border-box;
+    margin: 0.5vh 0.5vw;
+}
+
+.grupo:nth-child(7), .grupo:nth-child(8){
+    background-color: lightblue;
+}
+
+.grupo__tituloGrupo {
+    padding: 1vh;
+    margin-bottom: 1vh;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    background-color: gray;
+
+}
+
+.grupo table {
+    width: 100%;
+    height: 85%;
+}
+
+.grupo__encabezado td:nth-child(4) {
+    background-color: lightcyan;
+}
+
+.grupo__encabezado td {
+    padding: 0 0.3vw;
+}
+
+.grupo__pais {
+    padding-top: 5vw;
+    text-align: center;
+}
+
+.grupo__pais td {
+    vertical-align: middle;
+}
+
+.grupo__pais td:nth-child(4) {
+    background-color: lightcyan;
+}
+
+.grupo__pais___nombre {
+    text-align: left;
+}
+
+.grupo__pais___logo {
+    width: 2vh;
+    min-width: 20px;
+    margin: 0 1vw;
+}
+
