@@ -22,10 +22,6 @@ header {
     margin: 0.5vh 0.5vw;
 }
 
-.grupo:nth-child(7), .grupo:nth-child(8){
-    background-color: lightblue;
-}
-
 .grupo__tituloGrupo {
     padding: 1vh;
     margin-bottom: 1vh;
