@@ -3,7 +3,6 @@ header {
 }
 
 .grupos {
-    background-color: blue;
     margin: 3vh 3vw;
     display: flex;
     flex-wrap: wrap;
@@ -75,5 +74,6 @@ header {
 #canvas {
     margin: 3vw 3vh;
     background-color: green;
+    border-radius: 1vh;
 }
 

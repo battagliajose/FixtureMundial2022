@@ -10,10 +10,10 @@ resizeCanvas()
 draw();
 
 function draw(){
-    var boxWidth = canvasW/9.5;
+    var boxWidth = canvasW/8.9;
     var boxHeigh = canvasH/10
-    var columnSep = canvasW / 64;
-    var startX = 5;
+    var columnSep = canvasW / 88;
+    var startX = canvasW - (boxWidth+columnSep)*8;
 
     drawBoxColumn(startX, boxWidth, boxHeigh, 8)
     drawBoxColumn(startX + (boxWidth + columnSep), boxWidth, boxHeigh, 4)
@@ -23,6 +23,7 @@ function draw(){
     drawBoxColumn(startX + (boxWidth + columnSep)*5, boxWidth, boxHeigh, 2)
     drawBoxColumn(startX + (boxWidth + columnSep)*6, boxWidth, boxHeigh, 4)
     drawBoxColumn(startX + (boxWidth + columnSep)*7, boxWidth, boxHeigh, 8)
+    drawTextBox((canvasW-boxWidth)/2, canvasH-boxHeigh-boxHeigh/10, boxWidth, boxHeigh, "-", canvasW/25);
     teamCtr = 0;
 }
 
