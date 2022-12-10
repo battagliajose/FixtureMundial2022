@@ -68,3 +68,13 @@ header {
     margin: 0 1vw;
 }
 
+.llaves {
+    text-align: center;
+    
+}
+
+#canvas {
+    margin: 3vw 3vh;
+    background-color: green;
+}
+
