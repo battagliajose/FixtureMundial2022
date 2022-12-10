@@ -23,6 +23,7 @@ function draw(){
     drawBoxColumn(startX + (boxWidth + columnSep)*5, boxWidth, boxHeigh, 2)
     drawBoxColumn(startX + (boxWidth + columnSep)*6, boxWidth, boxHeigh, 4)
     drawBoxColumn(startX + (boxWidth + columnSep)*7, boxWidth, boxHeigh, 8)
+    
     drawTextBox((canvasW-boxWidth)/2, canvasH-boxHeigh-boxHeigh/10, boxWidth, boxHeigh, "-", canvasW/25);
     teamCtr = 0;
 }
