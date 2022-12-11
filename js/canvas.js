@@ -6,8 +6,7 @@ var teams = ["NED", "USA", "ARG", "AUS", "JPN", "CRO", "BRA", "KOR", "NED", "ARG
 var teamCtr = 0;
 
 context.strokeStyle = "#0A3871";
-resizeCanvas()
-draw();
+resizeCanvas();
 
 function draw(){
     var boxWidth = canvasW/8.9;
@@ -15,14 +14,13 @@ function draw(){
     var columnSep = canvasW / 88;
     var startX = canvasW - (boxWidth+columnSep)*8;
 
-    drawBoxColumn(startX, boxWidth, boxHeigh, 8)
-    drawBoxColumn(startX + (boxWidth + columnSep), boxWidth, boxHeigh, 4)
-    drawBoxColumn(startX + (boxWidth + columnSep)*2, boxWidth, boxHeigh, 2)
-    drawBoxColumn(startX + (boxWidth + columnSep)*3, boxWidth, boxHeigh, 1)
-    drawBoxColumn(startX + (boxWidth + columnSep)*4, boxWidth, boxHeigh, 1)
-    drawBoxColumn(startX + (boxWidth + columnSep)*5, boxWidth, boxHeigh, 2)
-    drawBoxColumn(startX + (boxWidth + columnSep)*6, boxWidth, boxHeigh, 4)
-    drawBoxColumn(startX + (boxWidth + columnSep)*7, boxWidth, boxHeigh, 8)
+    var boxQtyByColumn = ["8", "4", "2", "1", "1", "2", "4", "8"]
+
+    drawBoxColumn(startX, boxWidth, boxHeigh, boxQtyByColumn[0])
+
+    for (var i = 1; i < boxQtyByColumn.length; i++) {
+        drawBoxColumn(startX + (boxWidth + columnSep)*i, boxWidth, boxHeigh, boxQtyByColumn[i])
+    }
     
     drawTextBox((canvasW-boxWidth)/2, canvasH-boxHeigh-boxHeigh/10, boxWidth, boxHeigh, "-", canvasW/25);
     teamCtr = 0;
@@ -49,13 +47,6 @@ function drawText(posX, posY, width, height, text, fontSize){
     context.font = fontSize + "px Arial";
 
     context.fillText(text, posX+width*0.1, posY + (height+fontSize/2)/2);
-}
-
-function drawLine(sPosX, sPosY, ePosX, ePosY) {
-    context.beginPath();
-    context.moveTo(sPosX, sPosY);
-    context.lineTo(ePosX, ePosY);
-    context.stroke();
 }
 
 function drawBox(posX, posY, width, height) {
