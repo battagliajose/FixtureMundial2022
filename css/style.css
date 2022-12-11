@@ -72,7 +72,7 @@ header {
 }
 
 #canvas {
-    margin: 3vw 3vh;
+    margin: 3vh 3vw;
     background-color: green;
     border-radius: 1vh;
 }
